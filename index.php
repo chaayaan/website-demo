@@ -80,7 +80,7 @@
 <section class="relative min-h-screen flex items-center overflow-hidden" aria-label="Hero">
   <div class="absolute inset-0 bg-gradient-to-br from-forest-500 via-forest-400 to-ocean-400"></div>
   <div class="absolute inset-0 opacity-10">
-    <img src="https://picsum.photos/seed/goldlab-hero/1920/1080.jpg" alt="" class="w-full h-full object-cover" loading="eager">
+    <img src="index image.jpg" alt="" class="w-full h-full object-cover" loading="eager">
   </div>
   <div class="absolute top-20 right-10 w-72 h-72 bg-gold-400/10 rounded-full blur-3xl" aria-hidden="true"></div>
   <div class="absolute bottom-20 left-10 w-96 h-96 bg-forest-300/20 rounded-full blur-3xl" aria-hidden="true"></div>
@@ -123,7 +123,7 @@
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
       <div class="relative">
         <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-          <img src="https://picsum.photos/seed/goldlab-about/800/600.jpg" alt="Gold Lab laboratory interior with testing equipment" class="w-full h-full object-cover" loading="lazy" width="800" height="600">
+          <img src="home.jpg" alt="Gold Lab laboratory interior with testing equipment" class="w-full h-full object-cover" loading="lazy" width="800" height="600">
         </div>
         <div class="absolute -bottom-6 -right-4 sm:right-8 bg-white rounded-xl shadow-xl p-5 border border-stone-100">
           <div class="flex items-center gap-3">
@@ -219,7 +219,7 @@
       </div>
       <div class="relative">
         <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
-          <img src="https://picsum.photos/seed/goldlab-why/700/875.jpg" alt="Gold testing equipment at Gold Lab" class="w-full h-full object-cover" loading="lazy" width="700" height="875">
+          <img src="home 2.jpg" alt="Gold testing equipment at Gold Lab" class="w-full h-full object-cover" loading="lazy" width="700" height="875">
         </div>
         <div class="absolute top-6 left-6 bg-forest-400 text-white rounded-xl px-5 py-3 shadow-lg"><p class="text-2xl font-bold">99.9%</p><p class="text-xs text-white/80">Accuracy Rate</p></div>
       </div>

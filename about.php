@@ -91,7 +91,7 @@
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
       <div class="relative">
         <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-          <img src="https://picsum.photos/seed/about-lab/800/600.jpg" alt="Gold Lab interior with testing equipment and staff" class="w-full h-full object-cover" loading="lazy" width="800" height="600">
+          <img src="home.jpg" alt="Gold Lab interior with testing equipment and staff" class="w-full h-full object-cover" loading="lazy" width="800" height="600">
         </div>
         <div class="absolute -bottom-6 left-6 bg-gold-400 text-white rounded-xl px-6 py-4 shadow-lg"><p class="text-3xl font-bold">5+</p><p class="text-xs text-white/80">Years of Experience</p></div>
       </div>

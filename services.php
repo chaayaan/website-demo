@@ -93,7 +93,7 @@
     <div class="space-y-8">
 
       <article id="gold-purity-test" class="grid lg:grid-cols-2 gap-8 items-center bg-stone-50 rounded-2xl p-6 sm:p-8 border border-stone-100">
-        <div class="aspect-[16/10] rounded-xl overflow-hidden"><img src="https://picsum.photos/seed/svc-purity/700/440.jpg" alt="Gold purity testing using XRF machine at Gold Lab" class="w-full h-full object-cover" loading="lazy" width="700" height="440"></div>
+        <div class="aspect-[16/10] rounded-xl overflow-hidden"><img src="service 1.jpg" alt="Gold purity testing using XRF machine at Gold Lab" class="w-full h-full object-cover" loading="lazy" width="700" height="440"></div>
         <div>
           <div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 bg-forest-400 rounded-xl flex items-center justify-center"><i data-lucide="search" class="w-5 h-5 text-white" aria-hidden="true"></i></div><span class="text-xs font-semibold tracking-[0.1em] uppercase text-forest-400">01</span></div>
           <h2 class="text-xl sm:text-2xl font-bold text-stone-900 mb-3">Gold Purity Test</h2>
@@ -107,7 +107,7 @@
       </article>
 
       <article id="metal-purity-test" class="grid lg:grid-cols-2 gap-8 items-center bg-stone-50 rounded-2xl p-6 sm:p-8 border border-stone-100">
-        <div class="aspect-[16/10] rounded-xl overflow-hidden order-2 lg:order-1"><img src="https://picsum.photos/seed/svc-metal/700/440.jpg" alt="Metal purity analysis equipment" class="w-full h-full object-cover" loading="lazy" width="700" height="440"></div>
+        <div class="aspect-[16/10] rounded-xl overflow-hidden order-2 lg:order-1"><img src="service 2.jpg" alt="Metal purity analysis equipment" class="w-full h-full object-cover" loading="lazy" width="700" height="440"></div>
         <div class="order-1 lg:order-2">
           <div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 bg-forest-400 rounded-xl flex items-center justify-center"><i data-lucide="atom" class="w-5 h-5 text-white" aria-hidden="true"></i></div><span class="text-xs font-semibold tracking-[0.1em] uppercase text-forest-400">02</span></div>
           <h2 class="text-xl sm:text-2xl font-bold text-stone-900 mb-3">Metal Purity Test</h2>
@@ -121,7 +121,7 @@
       </article>
 
       <article id="hallmark-verification" class="grid lg:grid-cols-2 gap-8 items-center bg-stone-50 rounded-2xl p-6 sm:p-8 border border-stone-100">
-        <div class="aspect-[16/10] rounded-xl overflow-hidden"><img src="https://picsum.photos/seed/svc-hallmark/700/440.jpg" alt="Hallmark verification on gold jewellery" class="w-full h-full object-cover" loading="lazy" width="700" height="440"></div>
+        <div class="aspect-[16/10] rounded-xl overflow-hidden"><img src="service 3.png" alt="Hallmark verification on gold jewellery" class="w-full h-full object-cover" loading="lazy" width="700" height="440"></div>
         <div>
           <div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 bg-forest-400 rounded-xl flex items-center justify-center"><i data-lucide="badge-check" class="w-5 h-5 text-white" aria-hidden="true"></i></div><span class="text-xs font-semibold tracking-[0.1em] uppercase text-forest-400">03</span></div>
           <h2 class="text-xl sm:text-2xl font-bold text-stone-900 mb-3">Ornament / Jewellery Hallmark</h2>
@@ -135,7 +135,7 @@
       </article>
 
       <article id="metal-melting" class="grid lg:grid-cols-2 gap-8 items-center bg-stone-50 rounded-2xl p-6 sm:p-8 border border-stone-100">
-        <div class="aspect-[16/10] rounded-xl overflow-hidden order-2 lg:order-1"><img src="https://picsum.photos/seed/svc-melting/700/440.jpg" alt="Controlled metal melting furnace" class="w-full h-full object-cover" loading="lazy" width="700" height="440"></div>
+        <div class="aspect-[16/10] rounded-xl overflow-hidden order-2 lg:order-1"><img src="service 4.jpg" alt="Controlled metal melting furnace" class="w-full h-full object-cover" loading="lazy" width="700" height="440"></div>
         <div class="order-1 lg:order-2">
           <div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 bg-forest-400 rounded-xl flex items-center justify-center"><i data-lucide="flame" class="w-5 h-5 text-white" aria-hidden="true"></i></div><span class="text-xs font-semibold tracking-[0.1em] uppercase text-forest-400">04</span></div>
           <h2 class="text-xl sm:text-2xl font-bold text-stone-900 mb-3">Metal Melting</h2>
@@ -149,7 +149,7 @@
       </article>
 
       <article id="jewellery-welding" class="grid lg:grid-cols-2 gap-8 items-center bg-stone-50 rounded-2xl p-6 sm:p-8 border border-stone-100">
-        <div class="aspect-[16/10] rounded-xl overflow-hidden"><img src="https://picsum.photos/seed/svc-welding/700/440.jpg" alt="Laser jewellery welding service" class="w-full h-full object-cover" loading="lazy" width="700" height="440"></div>
+        <div class="aspect-[16/10] rounded-xl overflow-hidden"><img src="service 5.jpg" alt="Laser jewellery welding service" class="w-full h-full object-cover" loading="lazy" width="700" height="440"></div>
         <div>
           <div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 bg-forest-400 rounded-xl flex items-center justify-center"><i data-lucide="zap" class="w-5 h-5 text-white" aria-hidden="true"></i></div><span class="text-xs font-semibold tracking-[0.1em] uppercase text-forest-400">05</span></div>
           <h2 class="text-xl sm:text-2xl font-bold text-stone-900 mb-3">Ornament / Jewellery Welding</h2>
@@ -163,7 +163,7 @@
       </article>
 
       <article id="ornament-making" class="grid lg:grid-cols-2 gap-8 items-center bg-stone-50 rounded-2xl p-6 sm:p-8 border border-stone-100">
-        <div class="aspect-[16/10] rounded-xl overflow-hidden order-2 lg:order-1"><img src="https://picsum.photos/seed/svc-ornament/700/440.jpg" alt="Custom gold ornament making" class="w-full h-full object-cover" loading="lazy" width="700" height="440"></div>
+        <div class="aspect-[16/10] rounded-xl overflow-hidden order-2 lg:order-1"><img src="service 6.jpg" alt="Custom gold ornament making" class="w-full h-full object-cover" loading="lazy" width="700" height="440"></div>
         <div class="order-1 lg:order-2">
           <div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 bg-forest-400 rounded-xl flex items-center justify-center"><i data-lucide="gem" class="w-5 h-5 text-white" aria-hidden="true"></i></div><span class="text-xs font-semibold tracking-[0.1em] uppercase text-forest-400">06</span></div>
           <h2 class="text-xl sm:text-2xl font-bold text-stone-900 mb-3">Ornament Making</h2>
@@ -177,7 +177,7 @@
       </article>
 
       <article id="bulk-chain-making" class="grid lg:grid-cols-2 gap-8 items-center bg-stone-50 rounded-2xl p-6 sm:p-8 border border-stone-100">
-        <div class="aspect-[16/10] rounded-xl overflow-hidden"><img src="https://picsum.photos/seed/svc-chain/700/440.jpg" alt="Bulk gold chain manufacturing" class="w-full h-full object-cover" loading="lazy" width="700" height="440"></div>
+        <div class="aspect-[16/10] rounded-xl overflow-hidden"><img src="service 7.jpg" alt="Bulk gold chain manufacturing" class="w-full h-full object-cover" loading="lazy" width="700" height="440"></div>
         <div>
           <div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 bg-forest-400 rounded-xl flex items-center justify-center"><i data-lucide="link" class="w-5 h-5 text-white" aria-hidden="true"></i></div><span class="text-xs font-semibold tracking-[0.1em] uppercase text-forest-400">07</span></div>
           <h2 class="text-xl sm:text-2xl font-bold text-stone-900 mb-3">Bulk Gold Chain Making</h2>
