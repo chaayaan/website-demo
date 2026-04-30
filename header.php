@@ -5,15 +5,28 @@
  */
  $currentPage = basename($_SERVER['PHP_SELF']);
 ?>
+
+<!-- ══ INTRO OVERLAY ══ -->
+<div id="rg-intro-overlay">
+    <video
+        id="rg-intro-video"
+        src="bhaluka animation.mp4"
+        autoplay
+        muted
+        playsinline
+        preload="auto"
+    ></video>
+</div>
+
 <header id="mainHeader" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" role="banner">
   <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10">
     <nav class="flex items-center justify-between py-3 sm:py-4 lg:py-5" aria-label="Main navigation">
 
       <!-- Logo -->
-      <a href="index.php" class="flex items-center gap-2" aria-label="Gold Lab Home">
-        <i data-lucide="flask-conical" class="logo-icon w-6 h-6 text-gold-400 transition-colors duration-300"></i>
+      <a href="index.php" class="flex items-center gap-2.5" aria-label="Bhaluka Gold Lab Home">
+        <img src="bhaluka.png" alt="Bhaluka Gold Lab Logo" class="logo-icon h-8 w-auto object-contain transition-all duration-300" onerror="this.style.display='none'">
         <span class="logo-text text-white text-base sm:text-lg font-bold tracking-tight transition-colors duration-300">
-          Gold <span class="text-gold-400">Lab</span>
+          Bhaluka <span class="text-gold-400">Gold Lab</span>
         </span>
       </a>
 
@@ -67,9 +80,94 @@
   </div>
 </header>
 
+<style>
+/* ── Intro Overlay (same as reference) ─────── */
+#rg-intro-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: #fefefe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+#rg-intro-overlay.rg-intro-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+#rg-intro-video {
+    width: min(680px, 90vw);
+    aspect-ratio: 1280 / 504;
+    object-fit: contain;
+    display: block;
+}
+
+/* ── Mobile menu ───────────────────────────── */
+.mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.25s ease,
+                margin 0.3s ease;
+    margin-bottom: 0;
+}
+.mobile-menu.open {
+    max-height: 400px;
+    opacity: 1;
+    margin-bottom: 0.5rem;
+}
+
+/* ── Header scrolled ───────────────────────── */
+.header-scrolled {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.header-scrolled .logo-icon {
+    filter: drop-shadow(0 0 6px rgba(234, 179, 8, 0.4));
+}
+
+/* ── Active nav ────────────────────────────── */
+.nav-link.active {
+    background: rgba(234, 179, 8, 0.12);
+    color: #facc15 !important;
+}
+</style>
+
 <script>
-  // Mobile menu toggle
-  (function() {
+/* ── Intro Overlay (once per session) — exact reference logic ── */
+(function () {
+    var overlay = document.getElementById('rg-intro-overlay');
+    var video   = document.getElementById('rg-intro-video');
+    if (!overlay || !video) return;
+
+    if (sessionStorage.getItem('rg_intro_shown')) {
+        overlay.style.transition = 'none';
+        overlay.classList.add('rg-intro-hidden');
+        return;
+    }
+
+    function hideOverlay() {
+        overlay.classList.add('rg-intro-hidden');
+        sessionStorage.setItem('rg_intro_shown', '1');
+    }
+
+    video.addEventListener('ended', hideOverlay);
+
+    var fallback = setTimeout(hideOverlay, 4500);
+    video.addEventListener('ended', function () { clearTimeout(fallback); });
+    video.addEventListener('error', function () {
+        clearTimeout(fallback);
+        setTimeout(hideOverlay, 400);
+    });
+})();
+
+/* ── Mobile menu toggle ── */
+(function() {
     var toggle = document.getElementById('menuToggle');
     var menu = document.getElementById('mobileMenu');
     var iconOpen = document.getElementById('menuIcon');
@@ -77,31 +175,31 @@
     var isOpen = false;
 
     function setOpen(state) {
-      isOpen = state;
-      menu.classList.toggle('open', isOpen);
-      iconOpen.classList.toggle('hidden', isOpen);
-      iconClose.classList.toggle('hidden', !isOpen);
-      toggle.setAttribute('aria-expanded', isOpen);
+        isOpen = state;
+        menu.classList.toggle('open', isOpen);
+        iconOpen.classList.toggle('hidden', isOpen);
+        iconClose.classList.toggle('hidden', !isOpen);
+        toggle.setAttribute('aria-expanded', isOpen);
     }
 
     toggle.addEventListener('click', function() { setOpen(!isOpen); });
 
     menu.querySelectorAll('a').forEach(function(link) {
-      link.addEventListener('click', function() { setOpen(false); });
+        link.addEventListener('click', function() { setOpen(false); });
     });
 
     document.addEventListener('click', function(e) {
-      if (isOpen && !toggle.contains(e.target) && !menu.contains(e.target)) {
-        setOpen(false);
-      }
+        if (isOpen && !toggle.contains(e.target) && !menu.contains(e.target)) {
+            setOpen(false);
+        }
     });
 
-    // Scroll: transparent → solid
+    /* Scroll: transparent → solid */
     var header = document.getElementById('mainHeader');
     function onScroll() {
-      header.classList.toggle('header-scrolled', window.scrollY > 60);
+        header.classList.toggle('header-scrolled', window.scrollY > 60);
     }
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
-  })();
+})();
 </script>

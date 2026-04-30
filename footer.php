@@ -1,6 +1,6 @@
 <?php
 /**
- * Gold Lab – Reusable Footer
+ * Bhaluka Gold Lab – Reusable Footer
  * Include this file before closing </body></html> on every page.
  */
 ?>
@@ -10,9 +10,9 @@
 
       <!-- Brand -->
       <div class="sm:col-span-2 lg:col-span-1">
-        <a href="index.php" class="flex items-center gap-2 mb-5" aria-label="Gold Lab Home">
-          <i data-lucide="flask-conical" class="w-6 h-6 text-gold-400"></i>
-          <span class="text-white text-lg font-bold tracking-tight">Gold <span class="text-gold-400">Lab</span></span>
+        <a href="index.php" class="flex items-center gap-2.5 mb-5" aria-label="Bhaluka Gold Lab Home">
+          <img src="bhaluka.png" alt="Bhaluka Gold Lab Logo" class="h-8 w-auto object-contain" onerror="this.style.display='none'">
+          <span class="text-white text-lg font-bold tracking-tight">Bhaluka <span class="text-gold-400">Gold Lab</span></span>
         </a>
         <p class="text-stone-400 text-sm font-light leading-relaxed max-w-xs">Precision. Trust. Purity. Your reliable partner for gold testing and certification in Bangladesh.</p>
         <div class="flex gap-3 mt-6">
@@ -58,7 +58,7 @@
         <ul class="space-y-4">
           <li class="flex items-start gap-3">
             <i data-lucide="map-pin" class="w-4 h-4 text-forest-400 mt-0.5 flex-shrink-0"></i>
-            <span class="text-stone-400 text-sm font-light">Your City, Bangladesh</span>
+            <span class="text-stone-400 text-sm font-light">Bhaluka, Mymensingh, Bangladesh</span>
           </li>
           <li class="flex items-start gap-3">
             <i data-lucide="phone" class="w-4 h-4 text-forest-400 mt-0.5 flex-shrink-0"></i>
@@ -74,7 +74,7 @@
 
     <!-- Bottom Bar -->
     <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p class="text-stone-500 text-xs font-light">&copy; 2026 Gold Lab. All Rights Reserved.</p>
+      <p class="text-stone-500 text-xs font-light">&copy; 2026 Bhaluka Gold Lab. All Rights Reserved.</p>
       <div class="flex gap-6">
         <a href="#" class="text-stone-500 hover:text-white text-xs font-light transition-colors duration-150">Privacy Policy</a>
         <a href="#" class="text-stone-500 hover:text-white text-xs font-light transition-colors duration-150">Terms of Service</a>
