@@ -1,15 +1,15 @@
 <?php
 // ============================================================
-// MAA GOLD LAB — Single-File PHP Website
+// MAA GOLD LAB — Single-File PHP Website (Updated Images)
 // ============================================================
 
 // ── Page Router ─────────────────────────────────────────────
-$page = $_GET['page'] ?? 'home';
-$allowed = ['home', 'about', 'services', 'gallery', 'verify', 'contact'];
+ $page = $_GET['page'] ?? 'home';
+ $allowed = ['home', 'about', 'services', 'gallery', 'verify', 'contact'];
 if (!in_array($page, $allowed)) $page = 'home';
 
-// ── Services Data ────────────────────────────────────────────
-$services = [
+// ── Services Data (Updated with new filenames) ───────────────────
+ $services = [
     [
         'id'          => 'gold-testing',
         'title'       => 'Gold Testing',
@@ -19,7 +19,7 @@ $services = [
         'short'       => 'Precise gold purity analysis using advanced XRF technology.',
         'description' => 'We use state-of-the-art X-Ray Fluorescence (XRF) technology to determine the exact purity and karat value of any gold item — non-destructively and instantly.',
         'features'    => ['Accurate purity detection', 'Non-destructive testing', 'Instant digital results', 'Suitable for all gold items'],
-        'image'       => 'https://images.unsplash.com/photo-1610375461246-83df859d849d?w=600&q=80',
+        'image'       => 'gold testing.png', 
         'image_alt'   => 'XRF Gold Testing Machine',
     ],
     [
@@ -31,7 +31,7 @@ $services = [
         'short'       => 'Composition and quality testing of various metals.',
         'description' => 'Our advanced laboratory methods identify metal composition, detect impurities, and verify quality for both industrial and jewellery-grade metals.',
         'features'    => ['Identify metal composition', 'Detect impurities', 'Industrial & jewellery metals', 'Advanced laboratory methods'],
-        'image'       => 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80',
+        'image'       => 'metal testing.png', 
         'image_alt'   => 'Microscope for Metal Analysis',
     ],
     [
@@ -43,7 +43,7 @@ $services = [
         'short'       => 'BIS hallmarking as per standards for authenticity and trust.',
         'description' => 'Government-authorised BIS hallmarking that permanently certifies the purity of your jewellery, ensuring legal compliance and consumer confidence.',
         'features'    => ['BIS hallmarking as per standards', 'Permanent & accurate marking', 'Builds customer confidence', 'Ensures purity & legality'],
-        'image'       => 'https://images.unsplash.com/photo-1573408301185-9519eb07d0e0?w=600&q=80',
+        'image'       => 'jewellery hallmarking.png', 
         'image_alt'   => 'Hallmarking gold ring 916',
     ],
     [
@@ -55,7 +55,7 @@ $services = [
         'short'       => 'Refining and reshaping metals with high-heat processing.',
         'description' => 'Our high-temperature melting furnaces enable safe and precise refining, reshaping, and purification of gold and other precious metals.',
         'features'    => ['High-temperature melting', 'Safe and controlled process', 'Pure & refined output', 'Custom shapes & sizes'],
-        'image'       => 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80',
+        'image'       => 'metal melting.png', 
         'image_alt'   => 'Molten gold metal melting',
     ],
     [
@@ -67,7 +67,7 @@ $services = [
         'short'       => 'Professional jewellery welding and repair services.',
         'description' => 'From crack repair to full restoration, our skilled craftsmen use precision laser welding and soldering to bring your treasured ornaments back to life.',
         'features'    => ['Crack & break repair', 'Laser welding & soldering', 'Polishing & finishing', 'Skilled craftsmanship'],
-        'image'       => 'https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=600&q=80',
+        'image'       => 'ornament repair.png', 
         'image_alt'   => 'Jewellery repair and welding',
     ],
     [
@@ -79,13 +79,13 @@ $services = [
         'short'       => 'Fair valuation before selling or exchanging your gold.',
         'description' => 'Get the best value for your gold with our live-rate evaluation service. We provide accurate weight measurements and transparent calculations before every transaction.',
         'features'    => ['Accurate weight measurement', 'Live gold rate evaluation', 'Transparent calculation', 'Best value assurance'],
-        'image'       => 'https://images.unsplash.com/photo-1610375461246-83df859d849d?w=600&q=80',
+        'image'       => 'gold exchange evaluation.png', 
         'image_alt'   => 'Gold weighing scale evaluation',
     ],
 ];
 
 // ── Machines Data ─────────────────────────────────────────────
-$machines = [
+ $machines = [
     ['name' => 'XRF Gold Tester',          'icon' => '📡'],
     ['name' => 'Digital Weighing Scale',    'icon' => '⚖️'],
     ['name' => 'Microscope for Examination','icon' => '🔬'],
@@ -94,7 +94,7 @@ $machines = [
 ];
 
 // ── Testimonials ──────────────────────────────────────────────
-$testimonials = [
+ $testimonials = [
     ['name' => 'Rashid Ahmed',    'role' => 'Customer',          'stars' => 5, 'text' => 'Excellent service! Very accurate results and a very professional team. Highly recommended!'],
     ['name' => 'Farhana Sultana', 'role' => 'Jewellery Business', 'stars' => 5, 'text' => 'I always trust MAA GOLD LAB for gold testing. Highly recommended for any jeweller.'],
     ['name' => 'Sakib Hasan',     'role' => 'Customer',          'stars' => 5, 'text' => 'Quick service and a transparent process. Very satisfied with the results!'],
@@ -102,7 +102,7 @@ $testimonials = [
 ];
 
 // ── FAQs ──────────────────────────────────────────────────────
-$faqs = [
+ $faqs = [
     ['q' => 'How long does gold testing take?',      'a' => 'Most tests are completed within 15–30 minutes using our advanced XRF machines.'],
     ['q' => 'Is your testing report certified?',     'a' => 'Yes, every report carries our official seal, a unique Report ID, and a digital signature for full authenticity.'],
     ['q' => 'Can I verify my report online?',        'a' => 'Absolutely! Use our Verify Report page and enter your unique Report ID to instantly confirm authenticity.'],
@@ -111,7 +111,7 @@ $faqs = [
 ];
 
 // ── Values (About) ────────────────────────────────────────────
-$values = [
+ $values = [
     ['name' => 'Integrity',   'icon' => '🤝', 'desc' => 'We operate with honesty and full responsibility in every test.'],
     ['name' => 'Quality',     'icon' => '🏆', 'desc' => 'We maintain the highest quality standards in every result.'],
     ['name' => 'Innovation',  'icon' => '💡', 'desc' => 'We use advanced technology for the most precise outcomes.'],
@@ -119,20 +119,20 @@ $values = [
     ['name' => 'Trust',       'icon' => '🛡️', 'desc' => 'We build long-term relationships based on trust.'],
 ];
 
-// ── Gallery Images ────────────────────────────────────────────
-$gallery_images = [
-    ['src' => 'https://images.unsplash.com/photo-1610375461246-83df859d849d?w=500&q=80', 'alt' => 'XRF Gold Testing Machine', 'caption' => 'XRF Gold Tester'],
-    ['src' => 'https://images.unsplash.com/photo-1573408301185-9519eb07d0e0?w=500&q=80', 'alt' => 'Gold Hallmarking', 'caption' => 'Hallmarking Process'],
-    ['src' => 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=500&q=80', 'alt' => 'Metal Melting', 'caption' => 'Metal Melting Furnace'],
-    ['src' => 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=500&q=80', 'alt' => 'Metal Analysis Lab', 'caption' => 'Metal Testing Lab'],
-    ['src' => 'https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=500&q=80', 'alt' => 'Ornament Repair', 'caption' => 'Jewellery Repair Studio'],
-    ['src' => 'https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=500&q=80', 'alt' => 'Gold Jewellery', 'caption' => 'Premium Jewellery'],
-    ['src' => 'https://images.unsplash.com/photo-1598040785378-4c3a9dd2e0a3?w=500&q=80', 'alt' => 'Gold bars', 'caption' => 'Gold Evaluation'],
-    ['src' => 'https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=500&q=80', 'alt' => 'Lab Equipment', 'caption' => 'Advanced Equipment'],
+// ── Gallery Images (Updated with new filenames) ───────────────────
+ $gallery_images = [
+    ['src' => 'gold testing.png',             'alt' => 'XRF Gold Testing Machine', 'caption' => 'XRF Gold Tester'],
+    ['src' => 'jewellery hallmarking.png',    'alt' => 'Gold Hallmarking',         'caption' => 'Hallmarking Process'],
+    ['src' => 'metal melting.png',            'alt' => 'Metal Melting',            'caption' => 'Metal Melting Furnace'],
+    ['src' => 'metal testing.png',            'alt' => 'Metal Analysis Lab',       'caption' => 'Metal Testing Lab'],
+    ['src' => 'ornament repair.png',          'alt' => 'Ornament Repair',          'caption' => 'Jewellery Repair Studio'],
+    ['src' => 'lab interior.png',             'alt' => 'Lab Interior',             'caption' => 'Our Lab Facility'],
+    ['src' => 'machines equipment.png',       'alt' => 'Advanced Equipment',       'caption' => 'Lab Equipment'],
+    ['src' => 'decorative images.png',        'alt' => 'Decorative',               'caption' => 'Gallery View'],
 ];
 
 // ── Nav Links ─────────────────────────────────────────────────
-$nav_links = [
+ $nav_links = [
     ['href' => '?page=home',     'label' => 'Home'],
     ['href' => '?page=services', 'label' => 'Services', 'dropdown' => true],
     ['href' => '?page=about',    'label' => 'About'],
@@ -141,10 +141,10 @@ $nav_links = [
     ['href' => '?page=contact',  'label' => 'Contact'],
 ];
 
-$service_dropdown = ['Gold Testing','Metal Testing','Hallmarking','Metal Melting','Ornament Repair','Gold Exchange'];
+ $service_dropdown = ['Gold Testing','Metal Testing','Hallmarking','Metal Melting','Ornament Repair','Gold Exchange'];
 
 // ── Page Titles ───────────────────────────────────────────────
-$page_titles = [
+ $page_titles = [
     'home'     => 'MAA GOLD LAB — Purity You Can Trust',
     'about'    => 'About Us — MAA GOLD LAB',
     'services' => 'Our Services — MAA GOLD LAB',
@@ -154,8 +154,8 @@ $page_titles = [
 ];
 
 // ── Verify Report Logic ───────────────────────────────────────
-$verify_result = null;
-$verify_error  = null;
+ $verify_result = null;
+ $verify_error  = null;
 if ($page === 'verify' && !empty($_POST['report_id'])) {
     $rid = strtoupper(trim($_POST['report_id']));
     // Demo: one hardcoded authentic report
@@ -174,7 +174,7 @@ if ($page === 'verify' && !empty($_POST['report_id'])) {
 }
 
 // ── Contact Form Logic ────────────────────────────────────────
-$contact_success = false;
+ $contact_success = false;
 if ($page === 'contact' && $_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['full_name'])) {
     // In production: send email / save to DB here
     $contact_success = true;
@@ -453,155 +453,220 @@ button, input, select, textarea {
 .hamburger { display: none; }
 
 /* ═══════════════════════════════════════════════════════════════
-   HERO
+   HERO SECTION — Background Image Style
 ═══════════════════════════════════════════════════════════════ */
 .hero {
-  background: linear-gradient(135deg, #FAFAF5 0%, #F0EDD8 100%);
-  padding: 70px 0 60px;
+  background: #FFFFFF;
   position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
   overflow: hidden;
+  padding: 60px 0;
+
+  /* Background Image */
+  background-image: url('hero image.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
+/* Dark overlay for text readability */
 .hero::before {
   content: '';
-  position: absolute; inset: 0;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23B8860B' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    225deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 25%,
+    rgba(0, 0, 0, 0.15) 40%,
+    rgba(0, 0, 0, 0.5) 60%,
+    rgba(0, 0, 0, 0.8) 75%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  z-index: 1;
 }
+
+/* Break container free — start from screen left */
+.hero > .container {
+  max-width: 100%;
+  margin: 0;
+  padding-left: 200px;
+  padding-right: 24px;
+  position: relative;
+  z-index: 2;
+}
+
 .hero-inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 60px;
-  position: relative;
+  grid-template-columns: 1fr;
+  max-width: 640px;
 }
-.hero-badge {
+
+/* LEFT: Text Content */
+.hero-content {
+  max-width: 100%;
+}
+
+.hero-label {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: var(--gold-pale);
-  border: 1px solid rgba(184,134,11,.25);
-  border-radius: 100px;
-  padding: 5px 14px;
   font-size: 11px;
-  font-weight: 600;
-  color: var(--gold);
-  letter-spacing: .1em;
+  font-weight: 700;
+  letter-spacing: .18em;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  color: var(--gold-light);
+  margin-bottom: 18px;
 }
+.hero-label span {
+  display: inline-block;
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--gold-light);
+}
+
 .hero h2 {
   font-family: var(--ff-display);
-  font-size: clamp(34px, 5vw, 58px);
+  font-size: clamp(2.6rem, 4.5vw, 3.8rem);
   font-weight: 700;
-  line-height: 1.13;
-  color: var(--text-dark);
-  margin-bottom: 20px;
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: 18px;
+  text-align: left;
 }
-.hero h2 .accent { color: var(--gold); }
-.hero p {
-  font-size: 16px;
-  color: var(--text-soft);
-  max-width: 440px;
+.hero h2 .accent {
+  color: var(--gold-light);
+}
+
+.hero-sub {
+  font-size: 15px;
   line-height: 1.7;
+  color: rgba(255, 255, 255, .85);
   margin-bottom: 32px;
+  max-width: 480px;
+  text-align: left;
 }
-.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 44px; }
-.hero-highlights {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+
+/* Buttons */
+.hero-btns {
+  display: flex;
   gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+  justify-content: flex-start;
+}
+
+.btn-hero-primary {
+  background: var(--gold);
+  color: #FFFFFF;
+  padding: 14px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 18px rgba(184, 134, 11, .40);
+}
+.btn-hero-primary:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(184, 134, 11, .50);
+}
+
+.btn-hero-outline {
+  background: transparent;
+  color: var(--white);
+  border: 1.5px solid rgba(255, 255, 255, .5);
+  padding: 13px 26px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-hero-outline:hover {
+  border-color: var(--white);
+  background: rgba(255, 255, 255, .1);
+}
+
+/* Bottom highlights — icon row */
+.hero-highlights {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 .hero-hl {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
-  padding: 14px;
-  background: var(--white);
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-sm);
 }
 .hero-hl-icon {
-  width: 36px; height: 36px;
-  background: var(--gold-pale);
-  border-radius: 8px;
-  display: grid; place-items: center;
-  font-size: 18px;
-  flex-shrink: 0;
-}
-.hero-hl strong {
-  font-size: 13px;
-  font-weight: 600;
-  display: block;
-  color: var(--text-dark);
-}
-.hero-hl span {
-  font-size: 11px;
-  color: var(--text-soft);
-}
-/* Hero image side */
-.hero-visual {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.hero-machine-card {
-  background: var(--white);
-  border-radius: var(--radius-lg);
-  padding: 30px;
-  box-shadow: var(--shadow-lg);
-  border: 1px solid var(--border);
-  text-align: center;
-  position: relative;
-  max-width: 340px;
-  width: 100%;
-}
-.hero-machine-card img {
-  width: 220px;
-  margin: 0 auto 16px;
-  border-radius: var(--radius);
-}
-.machine-screen {
-  background: linear-gradient(135deg, #0A1A08, #1A3A0A);
-  border-radius: 10px;
-  padding: 16px 24px;
-  color: var(--white);
-  margin-bottom: 12px;
-}
-.machine-screen .karat {
-  font-family: var(--ff-display);
-  font-size: 38px;
-  font-weight: 700;
-  color: var(--gold-light);
-  display: block;
-  line-height: 1;
-}
-.machine-screen .pct {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, .25);
+  background: rgba(255, 255, 255, .1);
+  display: grid;
+  place-items: center;
   font-size: 16px;
-  color: rgba(255,255,255,.7);
+  flex-shrink: 0;
+  backdrop-filter: blur(4px);
 }
-.machine-label {
-  font-size: 12px;
-  color: var(--text-soft);
-  font-weight: 500;
+.hero-hl-text strong {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--white);
+  display: block;
+  line-height: 1.2;
+  text-align: left;
 }
-.float-badge {
-  position: absolute;
-  background: var(--white);
-  border-radius: 100px;
-  padding: 8px 16px;
-  font-size: 12px;
-  font-weight: 600;
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--border);
-  display: flex; align-items: center; gap: 6px;
-  animation: floatBadge 3s ease-in-out infinite;
+.hero-hl-text span {
+  font-size: 11px;
+  color: rgba(255, 255, 255, .7);
+  text-align: left;
 }
-.float-badge.top-right { top: -12px; right: -12px; }
-.float-badge.bottom-left { bottom: 20px; left: -16px; }
-@keyframes floatBadge {
-  0%,100% { transform: translateY(0); }
-  50%      { transform: translateY(-6px); }
+
+/* Hide the image wrapper completely */
+.hero-image-wrap {
+  display: none !important;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .hero > .container {
+    padding-left: 24px;
+  }
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+  .hero-content { max-width: 100%; }
+  .hero-sub { max-width: 100%; }
+
+  /* Show right side of image on mobile */
+  .hero {
+    background-position: right center;
+  }
+
+  /* Full dark overlay on mobile */
+  .hero::before {
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.85) 0%,
+      rgba(0, 0, 0, 0.8) 50%,
+      rgba(0, 0, 0, 0.6) 80%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+  }
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -852,7 +917,6 @@ button, input, select, textarea {
   background: var(--gold-pale);
   border-radius: 50%;
   display: grid; place-items: center;
-  flex-shrink: 0;
   font-size: 16px;
   color: var(--gold);
   font-weight: 700;
@@ -1472,8 +1536,8 @@ button, input, select, textarea {
   .gallery-grid { grid-template-columns: repeat(3,1fr); }
 }
 @media (max-width: 860px) {
-  .hero-inner { grid-template-columns: 1fr; }
-  .hero-visual { display: none; }
+  /* Hero remains single column */
+  .hero-highlights { grid-template-columns: 1fr; }
   .about-preview { grid-template-columns: 1fr; }
   .machines-inner { grid-template-columns: 1fr; }
   .machines-img { display: none; }
@@ -1511,7 +1575,6 @@ button, input, select, textarea {
   .verify-bar-inner { flex-direction: column; }
   .trust-badges { grid-template-columns: 1fr; }
   .values-grid { grid-template-columns: 1fr 1fr; }
-  .hero-highlights { grid-template-columns: 1fr 1fr; }
   .topbar { display: none; }
   .gallery-grid { grid-template-columns: repeat(2,1fr); }
 }
@@ -1599,49 +1662,65 @@ button, input, select, textarea {
 ══════════════════════════════════════════════ -->
 <?php if ($page === 'home'): ?>
 
-<!-- ─── HERO ─────────────────────────────────── -->
+<!-- ─── HERO — Background Image Style ─────────────────────── -->
 <section class="hero">
   <div class="container">
     <div class="hero-inner">
+
+      <!-- Content -->
       <div class="hero-content">
-        <span class="hero-badge">✦ Accurate · Reliable · Certified</span>
-        <h2 class="fade-up">Trust Begins<br>With <span class="accent">Purity</span></h2>
-        <p class="fade-up-2">Professional gold testing and hallmarking services with advanced technology and absolute transparency.</p>
-        <div class="hero-btns fade-up-3">
-          <a href="?page=contact" class="btn btn-primary">🛡️ Get Your Gold Tested</a>
-          <a href="?page=services" class="btn btn-outline">Explore Services →</a>
+
+        <div class="hero-label">
+          <span></span> Accurate <span></span> Reliable <span></span> Certified
         </div>
-        <div class="hero-highlights">
+
+        <h2 class="fade-up">
+          Trust Begins<br>With <span class="accent">Purity</span>
+        </h2>
+
+        <p class="hero-sub fade-up-2">
+          Professional gold testing and hallmarking services
+          with advanced technology and absolute transparency.
+        </p>
+
+        <div class="hero-btns fade-up-3">
+          <a href="?page=contact" class="btn-hero-primary">Get Your Gold Tested</a>
+          <a href="?page=services" class="btn-hero-outline">Explore Services</a>
+        </div>
+
+        <div class="hero-highlights fade-up-3">
           <div class="hero-hl">
             <div class="hero-hl-icon">🎯</div>
-            <div><strong>100% Accurate</strong><span>Advanced Technology</span></div>
+            <div class="hero-hl-text">
+              <strong>100% Accurate</strong>
+              <span>Advanced Technology</span>
+            </div>
           </div>
           <div class="hero-hl">
             <div class="hero-hl-icon">📜</div>
-            <div><strong>Certified Results</strong><span>Trusted & Reliable</span></div>
+            <div class="hero-hl-text">
+              <strong>Certified Results</strong>
+              <span>Trusted &amp; Reliable</span>
+            </div>
           </div>
           <div class="hero-hl">
             <div class="hero-hl-icon">⚡</div>
-            <div><strong>Quick Service</strong><span>Fast & Efficient</span></div>
+            <div class="hero-hl-text">
+              <strong>Quick Service</strong>
+              <span>Fast &amp; Efficient</span>
+            </div>
           </div>
           <div class="hero-hl">
             <div class="hero-hl-icon">👨‍🔬</div>
-            <div><strong>Expert Team</strong><span>Professional Specialists</span></div>
+            <div class="hero-hl-text">
+              <strong>Expert Team</strong>
+              <span>Professional Specialists</span>
+            </div>
           </div>
         </div>
+
       </div>
-      <!-- Visual -->
-      <div class="hero-visual">
-        <div class="hero-machine-card">
-          <div class="float-badge top-right">✅ Certified Lab</div>
-          <div class="machine-screen">
-            <span class="karat">24.75 K</span>
-            <span class="pct">99.00%</span>
-          </div>
-          <p class="machine-label">XRF Gold Testing Machine — Live Result</p>
-          <div class="float-badge bottom-left">🏆 BIS Authorised</div>
-        </div>
-      </div>
+
     </div>
   </div>
 </section>
@@ -1651,7 +1730,8 @@ button, input, select, textarea {
   <div class="container">
     <div class="about-preview">
       <div class="about-preview-img">
-        <img src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?w=700&q=80" alt="MAA GOLD LAB Office" loading="lazy">
+        <!-- Updated Filename -->
+        <img src="lab interior.png" alt="MAA GOLD LAB Office" loading="lazy">
         <div class="about-badge-overlay">
           <div>
             <div class="num">5+</div>
@@ -1724,7 +1804,7 @@ button, input, select, textarea {
         <span class="section-label" style="color:var(--gold-light);">Advanced Machines</span>
         <h2 class="section-title">Technology That Ensures <span class="accent">Accuracy</span></h2>
         <div class="divider"></div>
-        <p class="section-sub" style="color:rgba(255,255,255,.65); margin:0 0 8px;">We use the latest and most advanced testing equipment to ensure precise results with minimal time.</p>
+        <p class="section-sub" style="color:rgba(255,255,255,.65); margin:0 0 8px;">We use to latest and most advanced testing equipment to ensure precise results with minimal time.</p>
         <div class="machines-list">
           <?php foreach ($machines as $m): ?>
             <div class="machine-item">
@@ -1736,7 +1816,8 @@ button, input, select, textarea {
         <a href="?page=gallery" class="btn btn-gold" style="margin-top:24px;">Explore Our Machines</a>
       </div>
       <div class="machines-img">
-        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=700&q=80" alt="Lab Equipment" loading="lazy">
+        <!-- Updated Filename -->
+        <img src="machines equipment.png" alt="Lab Equipment" loading="lazy">
       </div>
     </div>
   </div>
@@ -1867,7 +1948,8 @@ button, input, select, textarea {
         <p>MAA Gold Lab was established with a mission to bring trust and accuracy into gold testing services. We focus on delivering transparent and reliable results using modern laboratory equipment.</p>
       </div>
       <div class="page-hero-img">
-        <img src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?w=600&q=80" alt="MAA Gold Lab Office" loading="lazy">
+        <!-- Updated Filename -->
+        <img src="team.png" alt="MAA Gold Lab Team" loading="lazy">
       </div>
     </div>
   </div>
@@ -1971,7 +2053,8 @@ button, input, select, textarea {
         <p>MAA Gold Lab provides accurate and certified testing services to ensure purity and transparency in every transaction.</p>
       </div>
       <div class="page-hero-img">
-        <img src="https://images.unsplash.com/photo-1610375461246-83df859d849d?w=600&q=80" alt="XRF Machine" loading="lazy">
+        <!-- Updated Filename -->
+        <img src="gold testing.png" alt="XRF Machine" loading="lazy">
       </div>
     </div>
   </div>
@@ -1993,10 +2076,12 @@ button, input, select, textarea {
               </ul>
             </div>
             <div class="service-detail-img">
+              <!-- Updated Filename -->
               <img src="<?= $svc['image'] ?>" alt="<?= htmlspecialchars($svc['image_alt']) ?>" loading="lazy">
             </div>
           <?php else: ?>
             <div class="service-detail-img">
+              <!-- Updated Filename -->
               <img src="<?= $svc['image'] ?>" alt="<?= htmlspecialchars($svc['image_alt']) ?>" loading="lazy">
             </div>
             <div class="service-detail-content">
@@ -2041,6 +2126,7 @@ button, input, select, textarea {
 <section class="section" style="background:var(--white);">
   <div class="container">
     <div class="gallery-grid">
+      <!-- Updated Filenames -->
       <?php foreach ($gallery_images as $img): ?>
         <div class="gallery-item">
           <img src="<?= $img['src'] ?>" alt="<?= htmlspecialchars($img['alt']) ?>" loading="lazy">
@@ -2063,7 +2149,8 @@ button, input, select, textarea {
         <p>All MAA Gold Lab reports include a unique ID to instantly verify authenticity and details. Try: <strong>MAA26G0515001</strong></p>
       </div>
       <div class="page-hero-img">
-        <img src="https://images.unsplash.com/photo-1610375461246-83df859d849d?w=600&q=80" alt="XRF Machine" loading="lazy">
+        <!-- Updated Filename -->
+        <img src="report verification.png" alt="XRF Machine" loading="lazy">
       </div>
     </div>
   </div>
@@ -2178,7 +2265,8 @@ button, input, select, textarea {
         <p>Need gold testing or have questions? We are here to help you with fast and reliable support.</p>
       </div>
       <div class="page-hero-img">
-        <img src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?w=600&q=80" alt="MAA Gold Lab Reception" loading="lazy">
+        <!-- Updated Filename -->
+        <img src="contact.png" alt="MAA Gold Lab Reception" loading="lazy">
       </div>
     </div>
   </div>
