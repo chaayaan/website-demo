@@ -127,7 +127,7 @@ if (!in_array($page, $allowed)) $page = 'home';
     ['src' => 'metal testing.png',            'alt' => 'Metal Analysis Lab',       'caption' => 'Metal Testing Lab'],
     ['src' => 'ornament repair.png',          'alt' => 'Ornament Repair',          'caption' => 'Jewellery Repair Studio'],
     ['src' => 'lab interior.png',             'alt' => 'Lab Interior',             'caption' => 'Our Lab Facility'],
-    ['src' => 'machines equipment.png',       'alt' => 'Advanced Equipment',       'caption' => 'Lab Equipment'],
+    ['src' => 'machines & equipment.png',       'alt' => 'Advanced Equipment',       'caption' => 'Lab Equipment'],
     ['src' => 'decorative images.png',        'alt' => 'Decorative',               'caption' => 'Gallery View'],
 ];
 
@@ -1817,7 +1817,7 @@ button, input, select, textarea {
       </div>
       <div class="machines-img">
         <!-- Updated Filename -->
-        <img src="machines equipment.png" alt="Lab Equipment" loading="lazy">
+        <img src="machines & equipment.png" alt="Lab Equipment" loading="lazy">
       </div>
     </div>
   </div>
