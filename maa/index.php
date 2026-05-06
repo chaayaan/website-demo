@@ -212,6 +212,7 @@ function active(string $p, string $current): string {
   --green:      #2D5016;
   --green-mid:  #3D6B1F;
   --green-soft: #4A7C23;
+  --green-accent: #2D5016;
   --cream:      #FAFAF7;
   --white:      #FFFFFF;
   --text-dark:  #1A1A1A;
@@ -252,7 +253,7 @@ button, input, select, textarea {
   font-weight: 600;
   letter-spacing: .15em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--green);
   display: block;
   margin-bottom: 10px;
 }
@@ -263,7 +264,7 @@ button, input, select, textarea {
   color: var(--text-dark);
   line-height: 1.2;
 }
-.section-title .accent { color: var(--gold); }
+.section-title .accent { color: var(--green-accent); }
 .section-sub {
   color: var(--text-soft);
   font-size: 15px;
@@ -273,7 +274,7 @@ button, input, select, textarea {
 .text-center { text-align: center; }
 .divider {
   width: 48px; height: 3px;
-  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  background: linear-gradient(90deg, var(--green), var(--green-mid));
   border-radius: 2px;
   margin: 14px 0 24px;
 }
@@ -323,13 +324,13 @@ button, input, select, textarea {
   border: 1.5px solid var(--border);
 }
 .btn-outline:hover {
-  border-color: var(--gold);
-  color: var(--gold);
+  border-color: var(--green);
+  color: var(--green);
 }
 .btn-gold {
-  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  background: linear-gradient(135deg, var(--green), var(--green-mid));
   color: var(--white);
-  box-shadow: 0 4px 18px rgba(184,134,11,.30);
+  box-shadow: 0 4px 18px rgba(45,80,22,.30);
 }
 .btn-gold:hover { opacity: .92; transform: translateY(-1px); }
 
@@ -353,7 +354,9 @@ button, input, select, textarea {
 ═══════════════════════════════════════════════════════════════ */
 .header {
   background: var(--white);
-  position: sticky; top: 0; z-index: 100;
+  position: sticky;
+  top: 0;
+  z-index: 1000; 
   box-shadow: 0 1px 0 var(--border), var(--shadow-sm);
   padding: 0;
 }
@@ -371,7 +374,7 @@ button, input, select, textarea {
 }
 .logo-icon {
   width: 42px; height: 42px;
-  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  background: linear-gradient(135deg, var(--green), var(--green-mid));
   border-radius: 10px;
   display: grid; place-items: center;
   flex-shrink: 0;
@@ -385,7 +388,7 @@ button, input, select, textarea {
   line-height: 1.1;
   letter-spacing: .02em;
 }
-.logo-text h1 span { color: var(--gold); }
+.logo-text h1 span { color: var(--green); }
 .logo-text p {
   font-size: 10px;
   color: var(--text-soft);
@@ -410,7 +413,7 @@ button, input, select, textarea {
   color: var(--green);
   background: rgba(45,80,22,.06);
 }
-.nav-item.active .nav-link { color: var(--gold); font-weight: 600; }
+.nav-item.active .nav-link { color: var(--green-accent); font-weight: 600; }
 /* Dropdown */
 .dropdown {
   position: absolute;
@@ -439,7 +442,7 @@ button, input, select, textarea {
   transition: var(--transition);
 }
 .dropdown a:hover {
-  background: var(--gold-pale);
+  background: rgba(45,80,22,.06);
   color: var(--green);
   padding-left: 22px;
 }
@@ -458,6 +461,7 @@ button, input, select, textarea {
 .hero {
   background: #FFFFFF;
   position: relative;
+  z-index: 0;
   min-height: 520px;
   display: flex;
   align-items: center;
@@ -477,13 +481,12 @@ button, input, select, textarea {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    225deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0) 25%,
-    rgba(0, 0, 0, 0.15) 40%,
-    rgba(0, 0, 0, 0.5) 60%,
-    rgba(0, 0, 0, 0.8) 75%,
-    rgba(0, 0, 0, 1) 100%
+    to left,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.15) 30%,
+    rgba(255,255,255,0.75) 55%,
+    rgba(255,255,255,0.95) 75%,
+    rgba(255,255,255,1) 100%
   );
   z-index: 1;
 }
@@ -517,33 +520,32 @@ button, input, select, textarea {
   font-weight: 700;
   letter-spacing: .18em;
   text-transform: uppercase;
-  color: var(--gold-light);
+  color: var(--green); 
   margin-bottom: 18px;
 }
 .hero-label span {
   display: inline-block;
   width: 4px; height: 4px;
   border-radius: 50%;
-  background: var(--gold-light);
+  background: var(--green); 
 }
-
 .hero h2 {
   font-family: var(--ff-display);
   font-size: clamp(2.6rem, 4.5vw, 3.8rem);
   font-weight: 700;
   line-height: 1.1;
-  color: var(--white);
+  color: var(--text-dark);
   margin-bottom: 18px;
   text-align: left;
 }
 .hero h2 .accent {
-  color: var(--gold-light);
+  color: var(--green); 
 }
 
 .hero-sub {
   font-size: 15px;
   line-height: 1.7;
-  color: rgba(255, 255, 255, .85);
+  color: var(--text-mid);
   margin-bottom: 32px;
   max-width: 480px;
   text-align: left;
@@ -559,7 +561,7 @@ button, input, select, textarea {
 }
 
 .btn-hero-primary {
-  background: var(--gold);
+  background: var(--green);
   color: #FFFFFF;
   padding: 14px 28px;
   font-size: 14px;
@@ -572,18 +574,18 @@ button, input, select, textarea {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 4px 18px rgba(184, 134, 11, .40);
+  box-shadow: 0 4px 18px rgba(45, 80, 22, .40);
 }
 .btn-hero-primary:hover {
-  background: var(--gold-light);
+  background: var(--green-mid);
   transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(184, 134, 11, .50);
+  box-shadow: 0 6px 24px rgba(45, 80, 22, .50);
 }
 
 .btn-hero-outline {
   background: transparent;
-  color: var(--white);
-  border: 1.5px solid rgba(255, 255, 255, .5);
+  color: var(--text-dark);
+  border: 1.5px solid var(--border);
   padding: 13px 26px;
   font-size: 14px;
   font-weight: 500;
@@ -594,9 +596,11 @@ button, input, select, textarea {
   align-items: center;
   gap: 8px;
 }
+
 .btn-hero-outline:hover {
-  border-color: var(--white);
-  background: rgba(255, 255, 255, .1);
+  border-color: var(--green);
+  color: var(--green);
+  background: rgba(45,80,22,.05);
 }
 
 /* Bottom highlights — icon row */
@@ -614,26 +618,23 @@ button, input, select, textarea {
 .hero-hl-icon {
   width: 38px; height: 38px;
   border-radius: 50%;
-  border: 1.5px solid rgba(255, 255, 255, .25);
-  background: rgba(255, 255, 255, .1);
+  border: 1.5px solid var(--border);
+  background: var(--white);       /* was: rgba(255,255,255,.1) */
   display: grid;
   place-items: center;
   font-size: 16px;
   flex-shrink: 0;
-  backdrop-filter: blur(4px);
 }
 .hero-hl-text strong {
   font-size: 13px;
   font-weight: 700;
-  color: var(--white);
+  color: var(--text-dark);
   display: block;
   line-height: 1.2;
-  text-align: left;
 }
 .hero-hl-text span {
   font-size: 11px;
-  color: rgba(255, 255, 255, .7);
-  text-align: left;
+  color: var(--text-soft);
 }
 
 /* Hide the image wrapper completely */
@@ -641,7 +642,6 @@ button, input, select, textarea {
   display: none !important;
 }
 
-/* Responsive */
 @media (max-width: 860px) {
   .hero > .container {
     padding-left: 24px;
@@ -652,19 +652,26 @@ button, input, select, textarea {
   .hero-content { max-width: 100%; }
   .hero-sub { max-width: 100%; }
 
-  /* Show right side of image on mobile */
   .hero {
     background-position: right center;
   }
 
-  /* Full dark overlay on mobile */
+ .btn-hero-outline {
+    border-color: var(--text-dark);
+    color: var(--text-dark);
+  }
+  .btn-hero-outline:hover {
+    border-color: var(--green);
+    color: var(--green);
+  }
+
   .hero::before {
     background: linear-gradient(
       to right,
-      rgba(0, 0, 0, 0.85) 0%,
-      rgba(0, 0, 0, 0.8) 50%,
-      rgba(0, 0, 0, 0.6) 80%,
-      rgba(0, 0, 0, 0.4) 100%
+      rgba(255,255,255,1)   0%,
+      rgba(255,255,255,0.50) 40%,
+      rgba(255,255,255,0.60) 65%,
+      rgba(255,255,255,1)   100%
     );
   }
 }
@@ -698,7 +705,7 @@ button, input, select, textarea {
   font-family: var(--ff-display);
   font-size: 28px;
   font-weight: 700;
-  color: var(--gold);
+  color: var(--green);
   line-height: 1;
 }
 .about-badge-overlay .lbl { font-size: 12px; color: var(--text-soft); }
@@ -709,11 +716,11 @@ button, input, select, textarea {
 }
 .about-val-card {
   flex: 1;
-  background: var(--gold-pale);
+  background: rgba(45,80,22,.06);
   border-radius: var(--radius);
   padding: 16px;
   text-align: center;
-  border: 1px solid rgba(184,134,11,.18);
+  border: 1px solid rgba(45,80,22,.15);
 }
 .about-val-card .icon { font-size: 22px; margin-bottom: 6px; }
 .about-val-card strong { font-size: 12px; font-weight: 600; color: var(--green); }
@@ -741,7 +748,7 @@ button, input, select, textarea {
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  background: linear-gradient(90deg, var(--green), var(--green-mid));
   transform: scaleX(0);
   transition: var(--transition);
 }
@@ -749,7 +756,7 @@ button, input, select, textarea {
 .service-card:hover::before { transform: scaleX(1); }
 .service-card-icon {
   width: 52px; height: 52px;
-  background: var(--gold-pale);
+  background: rgba(45,80,22,.06);
   border-radius: 12px;
   display: grid; place-items: center;
   font-size: 24px;
@@ -761,7 +768,7 @@ button, input, select, textarea {
   font-weight: 700;
   margin-bottom: 8px;
 }
-.service-card h3 .accent { color: var(--gold); }
+.service-card h3 .accent { color: var(--green-accent); }
 .service-card p { font-size: 13px; color: var(--text-soft); line-height: 1.6; }
 .service-card .read-more {
   display: inline-flex;
@@ -789,7 +796,7 @@ button, input, select, textarea {
   align-items: center;
 }
 .machines-inner .section-title { color: var(--white); }
-.machines-inner .section-title .accent { color: var(--gold-light); }
+.machines-inner .section-title .accent { color: #8BC34A; }
 .machines-inner .section-sub { color: rgba(255,255,255,.7); }
 .machines-list { margin-top: 30px; display: flex; flex-direction: column; gap: 14px; }
 .machine-item {
@@ -816,9 +823,9 @@ button, input, select, textarea {
    VERIFY BAR
 ═══════════════════════════════════════════════════════════════ */
 .verify-bar {
-  background: var(--gold-pale);
-  border-top: 1px solid rgba(184,134,11,.2);
-  border-bottom: 1px solid rgba(184,134,11,.2);
+  background: rgba(45,80,22,.06);
+  border-top: 1px solid rgba(45,80,22,.15);
+  border-bottom: 1px solid rgba(45,80,22,.15);
   padding: 36px 0;
 }
 .verify-bar-inner {
@@ -851,8 +858,8 @@ button, input, select, textarea {
 }
 .verify-form input[type="text"]:focus {
   outline: none;
-  border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(184,134,11,.12);
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(45,80,22,.12);
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -879,7 +886,7 @@ button, input, select, textarea {
 .t-avatar {
   width: 36px; height: 36px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  background: linear-gradient(135deg, var(--green), var(--green-mid));
   display: grid; place-items: center;
   color: var(--white);
   font-weight: 700;
@@ -911,14 +918,14 @@ button, input, select, textarea {
   gap: 10px;
   transition: var(--transition);
 }
-.faq-q:hover { background: var(--gold-pale); }
+.faq-q:hover { background: rgba(45,80,22,.06); }
 .faq-icon {
   width: 24px; height: 24px;
-  background: var(--gold-pale);
+  background: rgba(45,80,22,.06);
   border-radius: 50%;
   display: grid; place-items: center;
   font-size: 16px;
-  color: var(--gold);
+  color: var(--green);
   font-weight: 700;
   transition: var(--transition);
 }
@@ -955,7 +962,7 @@ button, input, select, textarea {
   margin-bottom: 10px;
   position: relative;
 }
-.cta-bar h2 span { color: var(--gold-light); }
+.cta-bar h2 span { color: #8BC34A; }
 .cta-bar p { color: rgba(255,255,255,.75); margin-bottom: 28px; position: relative; }
 .cta-bar .btn-gold { position: relative; }
 
@@ -988,7 +995,7 @@ button, input, select, textarea {
    PAGE HERO (inner pages)
 ═══════════════════════════════════════════════════════════════ */
 .page-hero {
-  background: linear-gradient(135deg, #F5EDD3 0%, #EDE0B8 100%);
+  background: linear-gradient(135deg, rgba(45,80,22,.06) 0%, rgba(61,107,31,.06) 100%);
   padding: 56px 0;
   position: relative;
   overflow: hidden;
@@ -999,7 +1006,7 @@ button, input, select, textarea {
   right: -60px; top: -60px;
   width: 300px; height: 300px;
   border-radius: 50%;
-  background: rgba(184,134,11,.08);
+  background: rgba(45,80,22,.06);
 }
 .page-hero-inner {
   display: flex;
@@ -1014,7 +1021,7 @@ button, input, select, textarea {
   line-height: 1.15;
   margin-bottom: 12px;
 }
-.page-hero h2 .accent { color: var(--gold); }
+.page-hero h2 .accent { color: var(--green-accent); }
 .page-hero p { color: var(--text-soft); max-width: 460px; line-height: 1.7; }
 .page-hero-img {
   max-width: 320px;
@@ -1049,7 +1056,7 @@ button, input, select, textarea {
   font-weight: 700;
   margin-bottom: 16px;
 }
-.commitment-card h3 .accent { color: var(--gold); }
+.commitment-card h3 .accent { color: var(--green-accent); }
 .commitment-item {
   display: flex;
   align-items: flex-start;
@@ -1058,7 +1065,7 @@ button, input, select, textarea {
 }
 .commitment-item-icon {
   width: 38px; height: 38px;
-  background: var(--gold-pale);
+  background: rgba(45,80,22,.06);
   border-radius: 8px;
   display: grid; place-items: center;
   font-size: 18px;
@@ -1101,61 +1108,152 @@ button, input, select, textarea {
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
 }
-.value-card:hover { border-color: var(--gold); box-shadow: var(--shadow-md); }
+.value-card:hover { border-color: var(--green); box-shadow: var(--shadow-md); }
 .value-card .icon { font-size: 28px; margin-bottom: 10px; }
 .value-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 6px; color: var(--green); }
 .value-card p { font-size: 12px; color: var(--text-soft); line-height: 1.5; }
 
 /* ═══════════════════════════════════════════════════════════════
-   SERVICES PAGE
+   SERVICES PAGE — Uniform Card Grid
 ═══════════════════════════════════════════════════════════════ */
-.services-detail-list { display: flex; flex-direction: column; gap: 0; }
-.service-detail-row {
+
+.services-detail-list {
   display: grid;
-  grid-template-columns: 380px 1fr;
-  gap: 0;
-  align-items: stretch;
-  border-bottom: 1px solid var(--border);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.service-detail-row {
+  display: flex;
+  flex-direction: column;
   background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
   transition: var(--transition);
 }
-.service-detail-row:first-child { border-radius: var(--radius-lg) var(--radius-lg) 0 0; }
-.service-detail-row:last-child {
-  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-  border-bottom: none;
+
+.service-detail-row:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+  z-index: 1;
 }
-.service-detail-row:nth-child(even) { background: var(--cream); }
-.service-detail-row:hover { box-shadow: var(--shadow-md); z-index: 1; }
-.service-detail-img { position: relative; overflow: hidden; }
-.service-detail-img img { width: 100%; height: 260px; object-fit: cover; display: block; }
-.service-detail-content { padding: 36px 40px; display: flex; flex-direction: column; justify-content: center; }
+
+/* Green top accent bar */
+.service-detail-row::before {
+  content: '';
+  display: block;
+  height: 4px;
+  background: linear-gradient(90deg, var(--green), var(--green-mid));
+  flex-shrink: 0;
+}
+
+/* ── Image — locked 400×300 ── */
+.service-detail-img {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.service-detail-img img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.service-detail-row:hover .service-detail-img img {
+  transform: scale(1.04);
+}
+
+/* ── Content below image ── */
+.service-detail-content {
+  padding: 24px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 .service-detail-content h3 {
   font-family: var(--ff-display);
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   margin-bottom: 8px;
+  line-height: 1.25;
 }
-.service-detail-content h3 .accent { color: var(--gold); }
-.service-detail-content .desc { color: var(--text-soft); font-size: 14px; margin-bottom: 18px; line-height: 1.65; }
-.feature-list { display: flex; flex-direction: column; gap: 8px; }
+
+.service-detail-content h3 .accent {
+  color: var(--green-accent);
+}
+
+.service-detail-content .desc {
+  color: var(--text-soft);
+  font-size: 13.5px;
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+
+/* ── Feature list — 2×2 grid ── */
+.feature-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 12px;
+  margin-top: auto;
+}
+
 .feature-list li {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 13px;
+  gap: 7px;
+  font-size: 12.5px;
   color: var(--text-mid);
 }
+
 .feature-list li::before {
   content: '✓';
-  width: 20px; height: 20px;
+  width: 18px;
+  height: 18px;
   background: var(--green);
   color: var(--white);
   border-radius: 50%;
-  display: grid; place-items: center;
-  font-size: 11px;
+  display: grid;
+  place-items: center;
+  font-size: 10px;
   font-weight: 700;
   flex-shrink: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 860px) {
+  .services-detail-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .service-detail-img,
+  .service-detail-img img {
+    height: 240px;
+  }
+}
+
+@media (max-width: 580px) {
+  .services-detail-list {
+    grid-template-columns: 1fr;
+  }
+  .service-detail-img,
+  .service-detail-img img {
+    height: 220px;
+  }
+  .service-detail-content {
+    padding: 20px;
+  }
+  .feature-list {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -1213,14 +1311,14 @@ button, input, select, textarea {
 .step-num {
   width: 52px; height: 52px;
   border-radius: 50%;
-  background: var(--gold-pale);
-  border: 2px solid var(--gold);
+  background: rgba(45,80,22,.06);
+  border: 2px solid var(--green);
   display: grid; place-items: center;
   margin: 0 auto 12px;
   font-family: var(--ff-display);
   font-size: 20px;
   font-weight: 700;
-  color: var(--gold);
+  color: var(--green);
 }
 .verify-step h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
 .verify-step p { font-size: 12px; color: var(--text-soft); }
@@ -1264,9 +1362,9 @@ button, input, select, textarea {
 }
 .verify-form-card input[type="text"]:focus {
   outline: none;
-  border-color: var(--gold);
+  border-color: var(--green);
   background: var(--white);
-  box-shadow: 0 0 0 3px rgba(184,134,11,.1);
+  box-shadow: 0 0 0 3px rgba(45,80,22,.1);
 }
 .verify-form-card button { width: 100%; }
 .result-header {
@@ -1346,7 +1444,7 @@ button, input, select, textarea {
   font-weight: 700;
   margin-bottom: 6px;
 }
-.contact-info-card h3 .accent { color: var(--gold); }
+.contact-info-card h3 .accent { color: var(--green-accent); }
 .contact-info-card p { color: var(--text-soft); font-size: 13px; margin-bottom: 24px; }
 .contact-item {
   display: flex;
@@ -1356,7 +1454,7 @@ button, input, select, textarea {
 }
 .contact-item-icon {
   width: 42px; height: 42px;
-  background: var(--gold-pale);
+  background: rgba(45,80,22,.06);
   border-radius: 10px;
   display: grid; place-items: center;
   font-size: 20px;
@@ -1364,7 +1462,7 @@ button, input, select, textarea {
 }
 .contact-item h4 { font-size: 13px; font-weight: 700; margin-bottom: 3px; }
 .contact-item p, .contact-item a { font-size: 13px; color: var(--text-soft); }
-.contact-item a:hover { color: var(--gold); }
+.contact-item a:hover { color: var(--green); }
 .why-contact {
   margin-top: 24px;
   padding-top: 24px;
@@ -1401,7 +1499,7 @@ button, input, select, textarea {
   font-weight: 700;
   margin-bottom: 6px;
 }
-.contact-form-card h3 .accent { color: var(--gold); }
+.contact-form-card h3 .accent { color: var(--green-accent); }
 .contact-form-card p { color: var(--text-soft); font-size: 13px; margin-bottom: 24px; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .form-group { margin-bottom: 16px; }
@@ -1430,9 +1528,9 @@ button, input, select, textarea {
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--gold);
+  border-color: var(--green);
   background: var(--white);
-  box-shadow: 0 0 0 3px rgba(184,134,11,.1);
+  box-shadow: 0 0 0 3px rgba(45,80,22,.1);
 }
 .success-msg {
   background: #ECFDF5;
@@ -1470,10 +1568,10 @@ button, input, select, textarea {
   color: var(--white);
   margin-bottom: 4px;
 }
-.footer-brand h3 span { color: var(--gold-light); }
+.footer-brand h3 span { color: #8BC34A; }
 .footer-brand .tagline {
   font-size: 12px;
-  color: var(--gold-light);
+  color: #8BC34A;
   letter-spacing: .08em;
   margin-bottom: 14px;
 }
@@ -1493,7 +1591,7 @@ button, input, select, textarea {
   transition: var(--transition);
 }
 .social-icon:hover {
-  background: var(--gold);
+  background: var(--green);
   color: var(--white);
 }
 .footer-col h4 {
@@ -1512,7 +1610,7 @@ button, input, select, textarea {
   transition: var(--transition);
 }
 .footer-col ul li a:hover {
-  color: var(--gold-light);
+  color: #8BC34A;
   padding-left: 4px;
 }
 .footer-bottom {
@@ -1598,7 +1696,7 @@ button, input, select, textarea {
 ══════════════════════════════════════════════ -->
 <div class="topbar">
   <div class="container">
-    <span class="topbar-loc">📍 18, Heliotola Road, 2nd Floor</span>
+    <span class="topbar-loc">📍 18, Helatola Road, 2nd Floor</span>
     <a href="tel:+8801234567890">📞 +880 1234-567890</a>
     <a href="mailto:info@maagoldlab.com">✉️ info@maagoldlab.com</a>
   </div>
@@ -1801,7 +1899,7 @@ button, input, select, textarea {
   <div class="container">
     <div class="machines-inner">
       <div>
-        <span class="section-label" style="color:var(--gold-light);">Advanced Machines</span>
+        <span class="section-label" style="color:#8BC34A;">Advanced Machines</span>
         <h2 class="section-title">Technology That Ensures <span class="accent">Accuracy</span></h2>
         <div class="divider"></div>
         <p class="section-sub" style="color:rgba(255,255,255,.65); margin:0 0 8px;">We use to latest and most advanced testing equipment to ensure precise results with minimal time.</p>
@@ -1905,7 +2003,7 @@ button, input, select, textarea {
 <section class="cta-bar">
   <div class="container">
     <h2>Get accurate gold testing today with <span>trusted results.</span></h2>
-    <p>Visit us at 18, Heliotola Road, 2nd Floor — Mon–Sat: 9:00 AM – 8:00 PM</p>
+    <p>Visit us at 18, Helatola Road, 2nd Floor — Mon–Sat: 9:00 AM – 8:00 PM</p>
     <a href="?page=contact" class="btn btn-gold">Book Your Test Now →</a>
   </div>
 </section>
@@ -1929,7 +2027,7 @@ button, input, select, textarea {
         </div>
         <div style="display:flex; align-items:center; gap:10px;">
           <span style="font-size:20px;">📍</span>
-          <div><div style="font-size:11px; color:var(--text-soft);">Location</div><strong>18, Heliotola Road, 2nd Floor</strong></div>
+          <div><div style="font-size:11px; color:var(--text-soft);">Location</div><strong>18, Helatola Road, 2nd Floor</strong></div>
         </div>
       </div>
     </div>
@@ -2064,38 +2162,21 @@ button, input, select, textarea {
   <div class="container">
     <div class="services-detail-list" style="border:1px solid var(--border); border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-md);">
       <?php foreach ($services as $i => $svc): ?>
-        <div class="service-detail-row" style="<?= $i%2===0 ? '' : 'flex-direction:row-reverse;' ?>">
-          <?php if ($i%2!==0): ?>
-            <div class="service-detail-content">
-              <h3><?= str_replace($svc['title_accent'], '<span class="accent">'.$svc['title_accent'].'</span>', $svc['title']) ?></h3>
-              <p class="desc"><?= $svc['description'] ?></p>
-              <ul class="feature-list">
-                <?php foreach ($svc['features'] as $f): ?>
-                  <li><?= htmlspecialchars($f) ?></li>
-                <?php endforeach; ?>
-              </ul>
-            </div>
-            <div class="service-detail-img">
-              <!-- Updated Filename -->
-              <img src="<?= $svc['image'] ?>" alt="<?= htmlspecialchars($svc['image_alt']) ?>" loading="lazy">
-            </div>
-          <?php else: ?>
-            <div class="service-detail-img">
-              <!-- Updated Filename -->
-              <img src="<?= $svc['image'] ?>" alt="<?= htmlspecialchars($svc['image_alt']) ?>" loading="lazy">
-            </div>
-            <div class="service-detail-content">
-              <h3><?= str_replace($svc['title_accent'], '<span class="accent">'.$svc['title_accent'].'</span>', $svc['title']) ?></h3>
-              <p class="desc"><?= $svc['description'] ?></p>
-              <ul class="feature-list">
-                <?php foreach ($svc['features'] as $f): ?>
-                  <li><?= htmlspecialchars($f) ?></li>
-                <?php endforeach; ?>
-              </ul>
-            </div>
-          <?php endif; ?>
-        </div>
-      <?php endforeach; ?>
+  <div class="service-detail-row">
+    <div class="service-detail-img">
+      <img src="<?= $svc['image'] ?>" alt="<?= htmlspecialchars($svc['image_alt']) ?>" loading="lazy">
+    </div>
+    <div class="service-detail-content">
+      <h3><?= str_replace($svc['title_accent'], '<span class="accent">'.$svc['title_accent'].'</span>', $svc['title']) ?></h3>
+      <p class="desc"><?= $svc['description'] ?></p>
+      <ul class="feature-list">
+        <?php foreach ($svc['features'] as $f): ?>
+          <li><?= htmlspecialchars($f) ?></li>
+        <?php endforeach; ?>
+      </ul>
+    </div>
+  </div>
+<?php endforeach; ?>
     </div>
   </div>
 </section>
@@ -2187,7 +2268,7 @@ button, input, select, textarea {
           <input type="text" name="report_id" placeholder="e.g. MAA26G0515001" value="<?= htmlspecialchars($_POST['report_id'] ?? $_GET['prefill_id'] ?? '') ?>" required>
           <button type="submit" class="btn btn-primary" style="width:100%;">🛡️ Verify Now</button>
         </form>
-        <div style="margin-top:20px; padding:14px; background:var(--gold-pale); border-radius:var(--radius); border:1px solid rgba(184,134,11,.2);">
+        <div style="margin-top:20px; padding:14px; background:rgba(45,80,22,.06); border-radius:var(--radius); border:1px solid rgba(45,80,22,.15);">
           <p style="font-size:12px; color:var(--text-mid);">🔒 <strong>Security Note:</strong> Reports are secure, authentic, and cannot be modified.</p>
         </div>
       </div>
@@ -2289,7 +2370,7 @@ button, input, select, textarea {
         </div>
         <div class="contact-item">
           <div class="contact-item-icon">📍</div>
-          <div><h4>Location</h4><p>18, Heliotola Road, 2nd Floor<br>Walk-in Service Available</p></div>
+          <div><h4>Location</h4><p>18, Helatola Road, 2nd Floor<br>Walk-in Service Available</p></div>
         </div>
         <div class="contact-item">
           <div class="contact-item-icon">🕐</div>
@@ -2396,7 +2477,7 @@ button, input, select, textarea {
         <ul>
           <li><a href="tel:+8801234567890">📞 +880 1234-567890</a></li>
           <li><a href="mailto:info@maagoldlab.com">✉️ info@maagoldlab.com</a></li>
-          <li><a href="#">📍 18, Heliotola Road, 2nd Floor</a></li>
+          <li><a href="#">📍 18, Helatola Road, 2nd Floor</a></li>
         </ul>
       </div>
     </div>
